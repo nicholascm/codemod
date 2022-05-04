@@ -75,7 +75,7 @@ export default function transformer(file: FileInfo, api: API, options) {
               ? registerIdentifier.parent.parent.parent
               : registerIdentifier.parent.parent;
 
-            if (maybeJsxAttribute.value.name?.name !== 'ref') return;
+            if (maybeJsxAttribute.value.name?.name !== 'inputRef') return;
 
             const jsxOpeningElement = j(maybeJsxAttribute.parentPath);
             // We search for all `name` attribute of the JSX element
